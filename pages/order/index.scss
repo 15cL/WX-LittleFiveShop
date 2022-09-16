@@ -1,0 +1,87 @@
+.order_page {
+
+  .daifu_list {
+    height: 100%;
+
+    .daifu_list_view {
+      height: calc(100vh - 100rpx);
+
+      .daifu_all {
+        .daifu_title {
+          display: flex;
+          justify-content: space-between;
+          padding: 30rpx;
+          font-size: 26rpx;
+          border-bottom: 1rpx solid gainsboro;
+        }
+
+        .daifu_section {
+          display: flex;
+
+          .daifu_item {
+            margin: 30rpx;
+
+            .daifu_item_pic {
+              width: 200rpx;
+              height: 200rpx;
+            }
+          }
+        }
+
+        .daifu_item_footer {
+          height: 60rpx;
+          border-bottom: 1rpx solid gainsboro;
+
+          .daifu_item_footer_content {
+            float: right;
+            width: 45%;
+            display: flex;
+            align-items: flex-end;
+
+            .left {
+              font-size: 26rpx;
+              margin-right: 16rpx;
+            }
+
+            .right {
+              font-size: 36rpx;
+              color: orangered;
+            }
+          }
+        }
+
+        .daifu_footer {
+          margin-top: 30rpx;
+          padding-left: 30rpx;
+
+          .btn_group {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+              width: 23%;
+              font-size: 26rpx;
+              background-color: white;
+              margin: 20rpx 15rpx;
+            }
+
+            .fukuan {
+              border: 1rpx solid orangered;
+              color: orangered;
+            }
+
+            .fukuan:active,
+            .cancel:active {
+              background-color: gainsboro;
+            }
+
+            .cancel {
+              border: 1rpx solid gainsboro;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

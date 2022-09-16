@@ -1,0 +1,86 @@
+@charset "UTF-8";
+view {
+  /*  使用主题颜色 */
+  color: var(--themeColor);
+  /* 统一尺寸  假设设计稿为 375px */
+  /* 1px= 2rpx 
+  14px = 28rpx */
+  font-size: 28rpx;
+}
+
+.home_page .home_swiper {
+  width: 750rpx;
+  height: 360rpx;
+}
+
+.home_page .home_nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+
+.home_page .home_nav .home_li {
+  padding: 10rpx;
+}
+
+.home_page .home_nav .home_li .nav_img {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.home_page .home_nav .home_li .nav_text {
+  color: black;
+  text-align: center;
+}
+
+.home_page .home_goods .home_goods_title {
+  color: gainsboro;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+
+.home_page .home_goods .home_goods_detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.home_page .home_goods .home_goods_detail .home_goods_li {
+  width: 335rpx;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  background-color: white;
+}
+
+.home_page .home_goods .home_goods_detail .home_goods_li .home_goods_left {
+  padding-top: 20rpx;
+}
+
+.home_page .home_goods .home_goods_detail .home_goods_li .home_goods_left .home_goods_img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.home_page .home_goods .home_goods_detail .home_goods_li .home_goods_right {
+  flex-wrap: wrap;
+  padding: 10rpx 20rpx 20rpx;
+}
+
+.home_page .home_goods .home_goods_detail .home_goods_li .home_goods_right .good_title {
+  width: 100%;
+  color: #242222;
+  text-align: start;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.home_page .home_goods .home_goods_detail .home_goods_li .home_goods_right .home_goods_price {
+  display: flex;
+  justify-content: space-between;
+}

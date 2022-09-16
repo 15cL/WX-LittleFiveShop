@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+  "BottomBox":"../../components/BottomBox/BottomBox"
+  },
+  "navigationBarTitleText": "商品详情"
+}

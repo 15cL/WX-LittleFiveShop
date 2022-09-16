@@ -1,0 +1,94 @@
+<view class="order_page">
+  <Tab tabs="{{tabs}}" bindgiveIndex="giveIndex">
+    <!-- 插槽写法 -->
+    <block wx:if="{{type==0}}">
+      <view class="daifu_list">
+        <scroll-view class="daifu_list_view" scroll-y="{{daifu.length>1}}" scroll-top="0">
+          <view class="daifu_all" wx:for="{{daifu}}" wx:key="daifuNum">
+            <view class="daifu_title">
+              <view class="title_left">{{item.daifuNum}}</view>
+              <view class="title_right" wx:if="cancelFlag">待支付 ></view>
+              <view class="title_right" wx:else>订单取消</view>
+            </view>
+
+            <view class="daifu_section">
+              <navigator class="daifu_item" url="/pages/goods_detail/index?id={{item1.good_id}}" wx:for="{{item.list}}"
+                wx:key="good_id" wx:for-item="item1">
+                <image class="daifu_item_pic" src="{{item1.basicInfo.basicInfo.pic}}" />
+              </navigator>
+            </view>
+
+            <view class="daifu_item_footer">
+              <view class="daifu_item_footer_content">
+                <view class="left">
+                  共 {{item.list.length}} 件商品 合计:
+                </view>
+                <view class="right">
+                  ￥{{item.total_price}}
+                </view>
+              </view>
+            </view>
+            <view class="daifu_footer">
+              <view>
+                {{item.time}}
+              </view>
+              <view class="btn_group" wx:if="cancelFlag">
+                <button class="fukuan" bindtap="handleFukuan">马上付款</button>
+                <button class="cancel" bindtap="handleCancel" data-index="{{index}}">取消订单</button>
+              </view>
+
+            </view>
+
+          </view>
+        </scroll-view>
+
+      </view>
+    </block>
+    <block wx:if="{{type==1}}">
+      <view class="daifu_list">
+        <scroll-view class="daifu_list_view" scroll-y="{{daifu.length>1}}">
+          <view class="daifu_all" wx:for="{{daifu}}" wx:key="daifuNum">
+            <view class="daifu_title">
+              <view class="title_left">{{item.daifuNum}}</view>
+              <view class="title_right">待支付 ></view>
+            </view>
+
+            <view class="daifu_section">
+              <navigator class="daifu_item" url="/pages/goods_detail/index?id={{item1.good_id}}" wx:for="{{item.list}}"
+                wx:key="good_id" wx:for-item="item1">
+                <image class="daifu_item_pic" src="{{item1.basicInfo.basicInfo.pic}}" />
+              </navigator>
+            </view>
+
+            <view class="daifu_item_footer">
+              <view class="daifu_item_footer_content">
+                <view class="left">
+                  共 {{item.list.length}} 件商品 合计:
+                </view>
+                <view class="right">
+                  ￥{{item.total_price}}
+                </view>
+              </view>
+            </view>
+            <view class="daifu_footer">
+              <view>
+                {{item.time}}
+              </view>
+              <view class="btn_group">
+                <button class="fukuan" bindtap="handleFukuan">马上付款</button>
+                <button class="cancel" bindtap="handleCancel" data-index="{{index}}">取消订单</button>
+              </view>
+
+            </view>
+
+          </view>
+        </scroll-view>
+
+      </view>
+    </block>
+    <block wx:if="{{type==2}}">2</block>
+    <block wx:if="{{type==3}}">3</block>
+    <block wx:if="{{type==4}}">4</block>
+  </Tab>
+
+</view>

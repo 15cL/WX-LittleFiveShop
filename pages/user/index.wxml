@@ -1,0 +1,89 @@
+<view class="user_page">
+  <view class="user_head a">
+    <view class="user_head_text user_head_comm" wx:if="{{hasUserInfo}}" bindtap="getUserProfile">
+      登录
+    </view>
+    <view wx:else class="user_head_detail user_head_comm">
+
+      <view class="user_head_left">
+        <view class="user_head_pic_content">
+          <image class="user_head_pic" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+        </view>
+
+        <view class="user_name">
+          <view class="user_id">
+            <view>用户ID: {{userId}}</view>
+            <view>{{userInfo.nickName}}</view>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="user_head_right">
+        <view class="iconfont icon-shezhi" style="height:40rpx ; margin-top: -10rpx;"></view>
+        <view style="font-size: 26rpx;">
+          设置
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class="user_detail">
+    <navgator class="user_ordering_li a" wx:for="{{detailList}}" wx:key="id">
+      <view class="iconfont {{item.icon}} user_ordering_icon"></view>
+      <view class="user_ordering_font">
+        {{item.title}}
+      </view>
+    </navgator>
+  </view>
+
+
+  <view class="user_ordering">
+    <view class="user_ordering_title">
+      <text>我的订单</text>
+      <text class="user_ordering_title1">更多 ></text>
+    </view>
+
+
+
+
+    <view class="user_ordering_body">
+      <navigator class="user_ordering_li a" url="/pages/order/index?type={{item.id}}" wx:for="{{orderingList}}" wx:key="id">
+        <view class="iconfont {{item.icon}} user_ordering_icon"></view>
+        <view class="user_ordering_font">
+          {{item.title}}
+        </view>
+
+      </navigator>
+    </view>
+
+    <view class="user_shouhuo_manage a">
+      收货地址管理
+    </view>
+
+    <view class="user_other">
+      <view class="user_other_title">其他功能</view>
+      <view class="user_other_li a">
+        客服
+      </view>
+      <view class="user_other_li a">
+        把应用推荐给其他人
+      </view>
+
+      <view class="user_other_li a">
+        意见反馈
+      </view>
+      <view class="user_other_li a">
+        关于我们
+      </view>
+
+
+    </view>
+
+
+
+  </view>
+</view>

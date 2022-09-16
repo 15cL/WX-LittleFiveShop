@@ -1,0 +1,173 @@
+.cart_page {
+  background-color: rgb(248, 248, 248);
+  padding-top: 20rpx;
+  height: 100vh;
+
+  .cart_page_content {
+    height: calc(100vh - 150rpx);
+
+    .cart_page_info {
+      display: flex;
+      padding: 20rpx;
+      margin: 20rpx 20rpx;
+      border-radius: 10rpx;
+      background-color: white;
+
+      .cart_checkbox {
+        flex: 1;
+        position: relative;
+
+        checkbox-group {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .cart_img {
+        width: 200rpx;
+      }
+
+      .cart_page_text {
+        flex: 4;
+        padding: 18rpx;
+
+        .text_up {
+          height: 70%;
+        }
+
+        .text_under {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .peisong_menu {
+      padding: 20rpx;
+      background-color: white;
+
+      .peisong_skill {
+        display: flex;
+        justify-content: space-between;
+        padding: 20rpx 0;
+        border-bottom: 1rpx solid rgb(222, 222, 222);
+
+        .peisong_select {
+          color: rgb(144, 144, 144);
+
+          radio-group {
+            radio:first-child {
+              margin-right: 40rpx;
+            }
+          }
+        }
+      }
+
+      .kuaidi_menu {
+        .shouAdress_nav {
+          padding: 30rpx 10rpx;
+          background-color: white;
+
+          .shouAdress_content {
+            display: flex;
+            justify-content: space-between;
+
+            border-radius: 20rpx;
+
+            .address_done {
+              .little_title {
+                margin-top: 10rpx;
+                font-size: smaller;
+                color: rgb(144, 144, 144);
+              }
+            }
+
+            .jiantou {
+              display: flex;
+              align-items: center;
+            }
+          }
+
+        }
+
+        .beizhu_nav {
+          display: flex;
+          padding: 20rpx 0;
+          border-top: 1rpx solid rgb(222, 222, 222);
+
+          .beizhu_left {
+            margin-right: 100rpx;
+          }
+        }
+
+        .shouAdress_nav:active {
+          background-color: gainsboro;
+        }
+      }
+
+      .ziqu_menu {
+        padding: 30rpx;
+        color: rgb(144, 144, 144);
+      }
+    }
+  }
+
+  .total_menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 130rpx;
+    padding: 20rpx;
+    background-color: white;
+    border-top: 1rpx solid rgb(248, 248, 248);
+
+    .total_left {
+      position: relative;
+      width: 30%;
+
+      checkbox-group {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      checkbox {
+        width: 200rpx;
+      }
+    }
+
+    .total_right {
+      display: flex;
+
+      .total_num {
+        margin-right: 50rpx;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        .num_outer {
+          color: orangered;
+          font-size: 36rpx;
+
+          .num_inner {
+            font-size: 22rpx;
+          }
+        }
+      }
+
+      button {
+        width: 200rpx;
+        border-radius: 30rpx;
+        background-color: orangered;
+        color: white;
+        font-weight: 600rpx;
+      }
+    }
+  }
+}

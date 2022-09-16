@@ -1,0 +1,56 @@
+<view class="cart_page">
+  <view wx:if="{{!userinfo.length}}" class="cart_tip">
+    <image class="" src="../../icon/空购物车.jpg" />
+    <view>
+      购物车竟然是空的
+    </view>
+
+  </view>
+  <scroll-view wx:else class="cart_page_content" scroll-y="{{userinfo.length>3}}">
+    <view class="cart_page_info" wx:for="{{userinfo}}" wx:key="id" data-id="{{item.good_id}}"
+      bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <view class="cart_checkbox">
+        <checkbox-group data-id="{{item.good_id}}" bindchange="handleXz">
+          <checkbox checked="{{item.checked}}"></checkbox>
+        </checkbox-group>
+      </view>
+
+      <navigator class="cart_img" url="/pages/goods_detail/index?id={{item.good_id}}">
+        <image src="{{item.basicInfo.basicInfo.pic}}" style="width:200rpx; height:200rpx;" />
+      </navigator>
+      <view class="cart_page_text">
+        <view class="text_up">{{item.basicInfo.basicInfo.name}}</view>
+        <view class="text_under">
+          <view style="color:orangered ;">￥{{item.basicInfo.basicInfo.minPrice}}</view>
+          <view class="edNum_grp">
+            <view class="edNum_btn edNum_act" bindtap="decNum" data-id="{{item.good_id}}" data-goodnum="{{item.num}}">-
+            </view>
+            <input class="edNum_btn" type="number" maxlength="2" data-id="{{item.good_id}}" value="{{item.num}}"
+              bindinput="editNum"></input>
+            <view class="edNum_btn edNum_act" bindtap="addNum" data-id="{{item.good_id}}" data-goodnum="{{item.num}}">+
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{item.good_id==seeDelId&&seeDel}}" class="delBtn" data-id="{{item.good_id}}" bindtap="delGood">
+        删除
+      </view>
+    </view>
+  </scroll-view>
+
+
+  <view class="total_menu">
+    <view class="total_left">
+      <checkbox-group bindchange="handleQx">
+        <checkbox checked="{{allchecked}}">全选</checkbox>
+      </checkbox-group>
+    </view>
+    <view class="total_right">
+      <view class="total_num">
+        合计:<text class="num_outer"><text class="num_inner">￥</text>{{total_price}}</text>
+      </view>
+      <button bindtap="handleTotal" >结算({{total_num}})</button>
+    </view>
+  </view>
+
+</view>

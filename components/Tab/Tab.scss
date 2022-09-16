@@ -1,0 +1,18 @@
+.tab_page {
+  .tab_title {
+    display: flex;
+
+    .tab_title_li {
+      padding: 30rpx 0;
+      text-align: center;
+      flex: 1;
+      background-color: antiquewhite;
+      font-size: 24rpx;
+    }
+
+    .active {
+      color: var(--themeColor);
+      border-bottom: 6rpx solid var(--themeColor);
+    }
+  }
+}

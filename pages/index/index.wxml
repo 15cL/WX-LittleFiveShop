@@ -1,0 +1,52 @@
+<view class="home_page">
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+
+  <!-- 轮播图 -->
+  <swiper class="home_swiper" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay circular>
+    <swiper-item wx:for="{{bannerList}}" wx:key="id">
+      <navigator class="home_swiper_a" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <image class="banner_img" src="{{item.picUrl}}" mode="widthfix" style="width: 750rpx;"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <!-- 导航栏 -->
+  <view class="home_nav">
+    <view class="home_li" wx:for="{{cateList}}" wx:for-index="index" wx:key="id" bind:tap="handleSwitchTab" data-index="{{index}}">
+      <image class="nav_img" mode="widthfix" src="{{item.icon}}" />
+      <view class="nav_text">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 商品楼层 -->
+  <view class="home_goods">
+    <view class="home_goods_title">
+      <text>
+        -———— 商品信息 ——————
+      </text>
+    </view>
+
+    <view class="home_goods_detail">
+      <navigator class="home_goods_li" wx:for="{{goodList}}" wx:key="id" url="/pages/goods_detail/index?id={{item.id}}">
+        <view class="home_goods_left">
+          <image class="home_goods_img" src="{{item.pic}}" lazy-load="true" />
+        </view>
+        <view class="home_goods_right">
+          <view class="good_title">{{item.name}}</view>
+          <view class="home_goods_price">
+            <view class="good_price">${{item.minPrice}}</view>
+            <view wx:if="{{item.originalPrice && item.originalPrice > 0}}"
+              style='color:#aaa;text-decoration:line-through'>
+              ¥ {{item.originalPrice}}
+            </view>
+          </view>
+        </view>
+
+      </navigator>
+    </view>
+  </view>
+
+</view>

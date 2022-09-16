@@ -1,0 +1,58 @@
+<view class="shade" bindtap="closePage">
+  <view class="bottom_box">
+
+    <!-- 关闭按钮 -->
+    <view class="closePage" bindtap="closePage" data-open="1">
+      <text>
+        X
+      </text>
+    </view>
+    <view class="selectMenu">
+
+
+      <!-- 图文显示 -->
+      <view class="select_pic">
+        <image class="select_img" src="{{menu.basicInfo.pic}}" mode="widthFix" />
+        <view class="select_detail">
+          {{menu.basicInfo.name}}
+          <view class="select_detail_price">
+            ￥{{menu.basicInfo.minPrice}}
+          </view>
+
+        </view>
+      </view>
+      <!-- 选择规格 -->
+      <view class="selectChar" wx:for="{{propers}}" wx:key="id" wx:for-item="item0" wx:for-index="index0">
+        <view class="selectChar_title">
+          {{item0.name}}
+        </view>
+        <view class="selectChar_all">
+          <view class="selectChar_have {{item1.isActive?'active':''}}" wx:for="{{item0.attributes}}"
+            wx:key="id" wx:for-item="item1" wx:for-index="index1" data-prop_index="{{index0}}"
+            data-skuList="{{skuList}}" data-properties="{{propers}}" data-attr_index="{{index1}}" bindtap="selectType">
+            {{item1.name}}
+          </view>
+        </view>
+
+      </view>
+
+      <!-- 编辑购买数量 -->
+      <view class="edNumBtnGroup">
+        <view class="edNum_title">
+          购买数量
+        </view>
+        <view class="edNum_grp">
+          <view class="edNum_btn edNum_act" bindtap="decNum" data-goodnum="{{goodNum}}">-</view>
+          <input class="edNum_btn" type="number" maxlength="2" value="{{goodNum}}" bindinput="editNum"></input>
+          <view class="edNum_btn edNum_act" bindtap="addNum" data-goodnum="{{goodNum}}">+</view>
+        </view>
+      </view>
+
+      <!-- 加入购物车按钮 -->
+      <view class="addShopcar" data-num="{{goodNum}}" data-guige="{{propers}}" data-detail="{{menu}}" bindtap="addShopCar">
+        加入购物车
+      </view>
+    </view>
+  </view>
+
+</view>

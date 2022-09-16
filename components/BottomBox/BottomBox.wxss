@@ -1,0 +1,120 @@
+.shade {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+}
+
+.shade .bottom_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  font-size: 26rpx;
+  border-radius: 50rpx 50rpx 0 0;
+}
+
+.shade .bottom_box .closePage {
+  position: absolute;
+  top: -30rpx;
+  right: 30rpx;
+  font-size: 30rpx;
+  color: #d8d8d8;
+}
+
+.shade .bottom_box .selectMenu .select_pic {
+  display: flex;
+  padding: 20rpx;
+  background-color: #fafafa;
+  margin-top: 60rpx;
+}
+
+.shade .bottom_box .selectMenu .select_pic .select_img {
+  width: 180rpx;
+}
+
+.shade .bottom_box .selectMenu .select_pic .select_detail {
+  margin-left: 20rpx;
+  margin-top: 60rpx;
+}
+
+.shade .bottom_box .selectMenu .select_pic .select_detail .select_detail_price {
+  color: var(--themeColor);
+}
+
+.shade .bottom_box .selectMenu .selectChar .selectChar_title {
+  font-size: 26rpx;
+  margin: 40rpx 20rpx 20rpx 20rpx;
+}
+
+.shade .bottom_box .selectMenu .selectChar .selectChar_all {
+  display: flex;
+  font-size: 26rpx;
+  margin-bottom: 50rpx;
+}
+
+.shade .bottom_box .selectMenu .selectChar .selectChar_all .selectChar_have {
+  padding: 20rpx;
+  border: 1rpx solid #fafafa;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+
+.shade .bottom_box .selectMenu .selectChar .selectChar_all .active {
+  border-color: #ff6600;
+  color: #ff6600;
+}
+
+.shade .bottom_box .selectMenu .selectChar .selectChar_all .disabled {
+  opacity: 0.5;
+  border-color: #e0e0e0;
+  color: #999999;
+}
+
+.shade .bottom_box .selectMenu .edNumBtnGroup {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  height: 100rpx;
+  font-size: 26rpx;
+  padding: 0 20rpx;
+}
+
+.shade .bottom_box .selectMenu .edNumBtnGroup .edNum_title {
+  flex: 1;
+}
+
+.shade .bottom_box .selectMenu .edNumBtnGroup .edNum_grp {
+  display: flex;
+}
+
+.shade .bottom_box .selectMenu .edNumBtnGroup .edNum_grp .edNum_btn {
+  height: 44rpx;
+  width: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  background-color: #fafafa;
+  margin: 0 5rpx;
+}
+
+.shade .bottom_box .selectMenu .edNumBtnGroup .edNum_grp .edNum_act:active {
+  box-shadow: 0.1rpx 0.1rpx 3rpx 1rpx rgba(169, 168, 168, 0.3);
+}
+
+.shade .bottom_box .selectMenu .edNumBtnGroup .edNum_grp input {
+  padding: 0 10rpx;
+  width: min-content;
+}
+
+.shade .bottom_box .selectMenu .addShopcar {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  background-color: var(--themeColor);
+}

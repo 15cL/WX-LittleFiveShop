@@ -1,0 +1,143 @@
+.detail_page {
+  .detail_page_view {
+    height: calc(100vh - 100rpx);
+
+    .detail_swiper {
+      swiper {
+        height: 45vh;
+        position: relative;
+
+        /*  */
+        .detail_img {
+          width: 45%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .detail_price {
+      .price {
+        margin: 20rpx 0 0 20rpx;
+        color: red;
+        font-weight: bold;
+      }
+
+      .detail {
+        height: 150rpx;
+        margin-top: 25rpx;
+        display: flex;
+        padding: 14rpx;
+        border: 1px dashed gainsboro;
+
+        .leftDetail {
+          flex: 6;
+          line-height: 30rpx;
+          border-right: 1px dashed gainsboro;
+
+          .leftDetail_title {
+            padding: 20rpx;
+            font-size: 30rpx;
+          }
+
+          .leftDetail_content {
+            padding: 0 0 20rpx 20rpx;
+            font-size: 24rpx;
+          }
+        }
+
+        .rightDetail {
+          flex: 1;
+          text-align: center;
+          font-size: 24rpx;
+
+          .img_content {
+            padding: 14rpx;
+            color: red;
+
+            image {
+              width: 36rpx;
+            }
+          }
+        }
+      }
+    }
+
+    .size_select {
+      display: flex;
+      padding: 20rpx;
+      justify-content: space-between;
+      font-size: 24rpx;
+      border-bottom: 1rpx dashed gainsboro;
+      .size_select_left {
+        display: flex;
+        .size_select_text {
+          text-align: center;
+          margin-left: 16rpx;
+        }
+      }
+    }
+    .size_select:active{
+      background-color: rgba(222, 209, 209, 0.208);
+    }
+
+    .img_detail {
+      .detail_title {
+        padding: 60rpx;
+        font-size: larger;
+        color: rgb(138, 133, 133);
+        text-align: center;
+      }
+
+      .detail_all {
+        border-top: 5rpx solid rgb(138, 133, 133);
+      }
+    }
+  }
+
+  .buy_buttonGroup {
+    height: 100rpx;
+    display: flex;
+    border-top: 1rpx solid #ccc;
+
+    .kefu,
+    .share,
+    .shopcar {
+      flex: 1;
+      text-align: center;
+      padding: 16rpx;
+      font-size: 24rpx;
+      position: relative;
+
+      button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    .addShopcar,
+    .buyNow {
+      flex: 2;
+      text-align: center;
+      line-height: 100rpx;
+      font-weight: bold;
+      color: white;
+    }
+
+    .addShopcar {
+      background-color: orange;
+    }
+
+    .buyNow {
+      background-color: red;
+    }
+  }
+
+
+}

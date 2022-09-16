@@ -1,0 +1,81 @@
+.order_page .daifu_list {
+  height: 100%;
+}
+
+.order_page .daifu_list .daifu_list_view {
+  height: calc(100vh - 100rpx);
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_title {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid gainsboro;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_section {
+  display: flex;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_section .daifu_item {
+  margin: 30rpx;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_section .daifu_item .daifu_item_pic {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_item_footer {
+  height: 60rpx;
+  border-bottom: 1rpx solid gainsboro;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_item_footer .daifu_item_footer_content {
+  float: right;
+  width: 45%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_item_footer .daifu_item_footer_content .left {
+  font-size: 26rpx;
+  margin-right: 16rpx;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_item_footer .daifu_item_footer_content .right {
+  font-size: 36rpx;
+  color: orangered;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_footer {
+  margin-top: 30rpx;
+  padding-left: 30rpx;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_footer .btn_group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_footer .btn_group button {
+  width: 23%;
+  font-size: 26rpx;
+  background-color: white;
+  margin: 20rpx 15rpx;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_footer .btn_group .fukuan {
+  border: 1rpx solid orangered;
+  color: orangered;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_footer .btn_group .fukuan:active,
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_footer .btn_group .cancel:active {
+  background-color: gainsboro;
+}
+
+.order_page .daifu_list .daifu_list_view .daifu_all .daifu_footer .btn_group .cancel {
+  border: 1rpx solid gainsboro;
+}

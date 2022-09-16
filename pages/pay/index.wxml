@@ -1,0 +1,79 @@
+<view class="cart_page">
+
+  <scroll-view class="cart_page_content" scroll-y="{{userinfo.length>=3}}">
+
+    <view class="cart_page_info" wx:for="{{userinfo}}" wx:key="id" data-id="{{item.good_id}}">
+      <navigator class="cart_img" url="/pages/goods_detail/index?id={{item.good_id}}">
+        <image src="{{item.basicInfo.basicInfo.pic}}" style="width:200rpx; height:200rpx;" />
+      </navigator>
+      <view class="cart_page_text">
+        <view class="text_up">{{item.basicInfo.basicInfo.name}}</view>
+        <view class="text_under">
+          <view style="color:orangered ;">￥{{item.basicInfo.basicInfo.minPrice}}</view>
+          <view>×{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="peisong_menu">
+      <view class="peisong_skill">
+        <view>
+          配送方式
+        </view>
+        <view class="peisong_select">
+          <radio-group bindchange="handleSelect">
+            <radio value="1" color="green" checked="{{checked}}">快递</radio>
+            <radio value="0" color="green" checked="{{!checked}}">到店自取</radio>
+          </radio-group>
+        </view>
+      </view>
+      <view class="kuaidi_menu" wx:if="{{checked}}">
+        <view class="shouAdress_nav" bindtap="handleToAdress">
+          <view class="shouAdress_content">
+            <view wx:if="{{!addressFlag}}">
+              <text class="iconfont icon-xinzeng"></text>
+              新增收货地址
+            </view>
+            <view class="address_done" wx:else>
+              <view>
+                {{address.userName}} {{address.telNumber}}
+              </view>
+              <view class="little_title">
+                {{address.provinceName}} {{address.cityName}}{{address.countyName}}{{address.detailInfo}}
+              </view>
+            </view>
+            <view class="jiantou">
+              >
+            </view>
+          </view>
+
+
+        </view>
+        <view class="beizhu_nav">
+          <view class="beizhu_left">
+            备注
+          </view>
+          <input type="text" placeholder="如需备注请输入"></input>
+        </view>
+      </view>
+      <view class="ziqu_menu" wx:else>
+        此功能暂未启用
+      </view>
+
+    </view>
+
+  </scroll-view>
+
+
+  <view class="total_menu">
+    <view class="total_left">
+    </view>
+    <view class="total_right">
+      <view class="total_num">
+        合计:<text class="num_outer"><text class="num_inner">￥</text>{{total_price}}</text>
+      </view>
+      <button bindtap="handleTotal">提交订单</button>
+    </view>
+  </view>
+
+</view>

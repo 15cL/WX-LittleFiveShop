@@ -1,0 +1,165 @@
+.cart_page {
+  background-color: #f8f8f8;
+  padding-top: 20rpx;
+  height: 100vh;
+}
+
+.cart_page .cart_page_content {
+  height: calc(100vh - 150rpx);
+}
+
+.cart_page .cart_page_content .cart_page_info {
+  display: flex;
+  padding: 20rpx;
+  margin: 20rpx 20rpx;
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.cart_page .cart_page_content .cart_page_info .cart_checkbox {
+  flex: 1;
+  position: relative;
+}
+
+.cart_page .cart_page_content .cart_page_info .cart_checkbox checkbox-group {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cart_page .cart_page_content .cart_page_info .cart_img {
+  width: 200rpx;
+}
+
+.cart_page .cart_page_content .cart_page_info .cart_page_text {
+  flex: 4;
+  padding: 18rpx;
+}
+
+.cart_page .cart_page_content .cart_page_info .cart_page_text .text_up {
+  height: 70%;
+}
+
+.cart_page .cart_page_content .cart_page_info .cart_page_text .text_under {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_page .cart_page_content .peisong_menu {
+  padding: 20rpx;
+  background-color: white;
+}
+
+.cart_page .cart_page_content .peisong_menu .peisong_skill {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.cart_page .cart_page_content .peisong_menu .peisong_skill .peisong_select {
+  color: #909090;
+}
+
+.cart_page .cart_page_content .peisong_menu .peisong_skill .peisong_select radio-group radio:first-child {
+  margin-right: 40rpx;
+}
+
+.cart_page .cart_page_content .peisong_menu .kuaidi_menu .shouAdress_nav {
+  padding: 30rpx 10rpx;
+  background-color: white;
+}
+
+.cart_page .cart_page_content .peisong_menu .kuaidi_menu .shouAdress_nav .shouAdress_content {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20rpx;
+}
+
+.cart_page .cart_page_content .peisong_menu .kuaidi_menu .shouAdress_nav .shouAdress_content .address_done .little_title {
+  margin-top: 10rpx;
+  font-size: smaller;
+  color: #909090;
+}
+
+.cart_page .cart_page_content .peisong_menu .kuaidi_menu .shouAdress_nav .shouAdress_content .jiantou {
+  display: flex;
+  align-items: center;
+}
+
+.cart_page .cart_page_content .peisong_menu .kuaidi_menu .beizhu_nav {
+  display: flex;
+  padding: 20rpx 0;
+  border-top: 1rpx solid #dedede;
+}
+
+.cart_page .cart_page_content .peisong_menu .kuaidi_menu .beizhu_nav .beizhu_left {
+  margin-right: 100rpx;
+}
+
+.cart_page .cart_page_content .peisong_menu .kuaidi_menu .shouAdress_nav:active {
+  background-color: gainsboro;
+}
+
+.cart_page .cart_page_content .peisong_menu .ziqu_menu {
+  padding: 30rpx;
+  color: #909090;
+}
+
+.cart_page .total_menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 130rpx;
+  padding: 20rpx;
+  background-color: white;
+  border-top: 1rpx solid #f8f8f8;
+}
+
+.cart_page .total_menu .total_left {
+  position: relative;
+  width: 30%;
+}
+
+.cart_page .total_menu .total_left checkbox-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cart_page .total_menu .total_left checkbox {
+  width: 200rpx;
+}
+
+.cart_page .total_menu .total_right {
+  display: flex;
+}
+
+.cart_page .total_menu .total_right .total_num {
+  margin-right: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.cart_page .total_menu .total_right .total_num .num_outer {
+  color: orangered;
+  font-size: 36rpx;
+}
+
+.cart_page .total_menu .total_right .total_num .num_outer .num_inner {
+  font-size: 22rpx;
+}
+
+.cart_page .total_menu .total_right button {
+  width: 200rpx;
+  border-radius: 30rpx;
+  background-color: orangered;
+  color: white;
+  font-weight: 600rpx;
+}

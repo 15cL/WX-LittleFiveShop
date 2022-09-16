@@ -1,0 +1,38 @@
+.adress_page .adress_get {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 20rpx;
+}
+
+.adress_page .adress_get:active {
+  background-color: gainsboro;
+}
+
+.adress_page .section_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+}
+
+.adress_page .section_row .section_row_left {
+  width: 30%;
+}
+
+.adress_page .section_row input {
+  width: 60%;
+  text-align: right;
+}
+
+.adress_page .Ok_btn {
+  height: 90rpx;
+  margin: 30rpx;
+  font-size: larger;
+  text-align: center;
+  line-height: 90rpx;
+  background-color: green;
+  color: white;
+}
+
+.adress_page .Ok_btn:active {
+  background-color: gainsboro;
+}

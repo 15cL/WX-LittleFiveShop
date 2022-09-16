@@ -1,0 +1,46 @@
+<view class="adress_page">
+  <view class="adress_get" bindtap="getAdress">
+    <view>
+      一键获取微信收货地址
+    </view>
+    <view>></view>
+  </view>
+  <view class="section">
+    <view class="section_row">
+      <view class="section__title">地区</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker" wx:if="{{!regSta.length}}">
+          请选择 >
+        </view>
+        <view class="picker" wx:else>
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section_row">
+      <view class="section_row_left">
+        收货人姓名
+      </view>
+      <input value="{{username}}" type="text" placeholder="填写收货人" placeholder-style="text-align:right" bindinput="handleName">{{username}}</input>
+    </view>
+    <view class="section_row">
+      <view class="section_row_left">
+        手机号码
+      </view>
+
+      <input value="{{phoneNum}}" type="number"  placeholder="填写手机号码" placeholder-style="text-align:right" bindinput="handlePhone"></input>
+    </view>
+    <view class="section_row">
+      <view class="section_row_left">
+        详细地址
+      </view>
+      <input value="{{addressDetail}}" type="text" placeholder="街道门牌信息" placeholder-style="text-align:right" bindinput="handleAddress"></input>
+    </view>
+
+  </view>
+
+  <view class="Ok_btn" data-address="{{getAddress}}" bindtap="okAddress">
+    保存
+  </view>
+
+</view>

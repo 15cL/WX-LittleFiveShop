@@ -1,0 +1,40 @@
+.adress_page {
+  .adress_get {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 20rpx;
+  }
+
+  .adress_get:active {
+    background-color: gainsboro;
+  }
+
+  .section_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx;
+
+    .section_row_left {
+      width: 30%;
+    }
+
+    input {
+      width: 60%;
+      text-align: right;
+    }
+  }
+
+  .Ok_btn {
+    height: 90rpx;
+    margin: 30rpx;
+    font-size: larger;
+    text-align: center;
+    line-height: 90rpx;
+    background-color: green;
+    color: white;
+  }
+
+  .Ok_btn:active {
+    background-color: gainsboro;
+  }
+}

@@ -1,0 +1,129 @@
+.shade {
+  // 遮罩层
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  
+  .bottom_box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    font-size: 26rpx;
+    border-radius: 50rpx 50rpx 0 0;
+
+    .closePage {
+      position: absolute;
+      top: -30rpx;
+      right: 30rpx;
+      font-size: 30rpx;
+      color: #d8d8d8;
+    }
+
+    .selectMenu {
+
+      .select_pic {
+        display: flex;
+        padding: 20rpx;
+        background-color: #fafafa;
+        margin-top: 60rpx;
+
+        .select_img {
+          width: 180rpx;
+        }
+
+        .select_detail {
+          margin-left: 20rpx;
+          margin-top: 60rpx;
+
+          .select_detail_price {
+            color: var(--themeColor);
+          }
+        }
+      }
+
+      .selectChar {
+
+        .selectChar_title {
+          font-size: 26rpx;
+          margin: 40rpx 20rpx 20rpx 20rpx;
+        }
+
+        .selectChar_all {
+          display: flex;
+          font-size: 26rpx;
+          margin-bottom: 50rpx;
+
+          .selectChar_have {
+            padding: 20rpx;
+            border: 1rpx solid #fafafa;
+            border-radius: 10rpx;
+            margin-left: 20rpx;
+
+          }
+
+          .active {
+            border-color: #ff6600;
+            color: #ff6600;
+          }
+
+          .disabled {
+            opacity: 0.5;
+            border-color: #e0e0e0;
+            color: #999999;
+          }
+        }
+      }
+
+      .edNumBtnGroup {
+        margin-top: 20rpx;
+        display: flex;
+        justify-content: space-around;
+        height: 100rpx;
+        font-size: 26rpx;
+        padding: 0 20rpx;
+
+        .edNum_title {
+          flex: 1;
+        }
+
+        .edNum_grp {
+          display: flex;
+
+          .edNum_btn {
+            height: 44rpx;
+            width: 44rpx;
+            line-height: 44rpx;
+            text-align: center;
+            background-color: #fafafa;
+            margin: 0 5rpx;
+
+          }
+
+          .edNum_act:active {
+            box-shadow: 0.1rpx 0.1rpx 3rpx 1rpx rgba(169, 168, 168, .3);
+          }
+
+          input {
+            padding: 0 10rpx;
+            width: min-content;
+          }
+        }
+      }
+
+      .addShopcar {
+        width: 100%;
+        height: 100rpx;
+        text-align: center;
+        line-height: 100rpx;
+        color: white;
+        background-color: var(--themeColor);
+      }
+    }
+  }
+}

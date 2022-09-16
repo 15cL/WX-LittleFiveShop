@@ -1,0 +1,45 @@
+<view class="categoryPage">
+  <SearchInput></SearchInput>
+
+  <view class="categoryContent">
+    <!-- 左侧类别 -->
+    <scroll-view class="leftContent" scroll-y>
+      <view class="leftContent_li {{selectIndex===index?'active':''}}" wx:for="{{cateLeftList}}" wx:key="id"
+        wx:for-index="index" bindtap="handleItemTap" data-index='{{index}}'>
+        {{item.name}}
+        <image class="leftImg" src="{{item.icon}}" mode="widthFix" lazy-load="true" />
+
+      </view>
+    </scroll-view>
+
+    <!-- 右侧商品 -->
+    <scroll-view class="rightContent" scroll-y="{{scrollY}}" scroll-top="{{scrollTop}}">
+      <view class="goods_content ">
+        <view class="goods_name">
+          /{{cateRightList.name}}/
+        </view>
+
+        <view class="goods_detail">
+          <navigator class="goods_little" url="/pages/goods_detail/index?id={{item2.id}}"
+            wx:for="{{cateRightList.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="id">
+            <image class="goods_img" src="{{item2.pic}}" lazy-load="true" />
+            <view class="goods_title">
+              {{item2.pname}}
+            </view>
+          </navigator>
+          <view class="goods_No" wx:if="{{!cateRightList.children.length}}">
+            <text>
+              当前分类暂无商品~
+            </text>
+          </view>
+
+        </view>
+
+
+      </view>
+
+    </scroll-view>
+  </view>
+
+
+</view>

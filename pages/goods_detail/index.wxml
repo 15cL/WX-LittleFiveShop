@@ -1,0 +1,87 @@
+<view class="detail_page">
+  <scroll-view scroll-y class="detail_page_view">
+
+    <!-- 轮播图 -->
+    <view class="detail_swiper">
+      <swiper indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay>
+        <swiper-item class="" wx:for="{{goodsDetail.pics}}" wx:key="id" wx:for-index="index" bindtap="handleBigImg"
+          data-pics="{{goodsDetail.pics}}" data-index="{{index}}">
+          <image style="position: absolute; left: 376rpx; top: 272rpx" class="detail_img" mode="widthFix"
+            src="{{item.pic}} " />
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <!-- 商品详情 -->
+    <view class="detail_price">
+      <view class="price">
+        ￥{{goodsDetail.basicInfo.minPrice}}
+      </view>
+      <view class="detail">
+        <view class="leftDetail">
+          <view class="leftDetail_title">
+            {{goodsDetail.basicInfo.name}}
+          </view>
+          <view class="leftDetail_content">
+            {{goodsDetail.basicInfo.characteristic}} {{goodsDetail.basicInfo.subName}}
+          </view>
+        </view>
+        <view class="rightDetail" bindtap="toggleCollect">
+          <view class="iconfont img_content {{collectSta?'icon-shoucang_shixin':'icon-shoucang'}}"></view>
+          收藏
+        </view>
+      </view>
+    </view>
+    <!-- 规格选择 -->
+    <view class="size_select" bindtap="selectOpen" wx:if="{{properties.length}}">
+      <view class="size_select_left">
+        <view class="size_select_text">
+          请选择:
+        </view>
+        <view class="size_select_text" wx:for="{{properties}}" wx:key="id">
+          {{item.name}}
+        </view>
+      </view>
+      <view class="size_select_right">
+        >
+      </view>
+    </view>
+
+    <!-- 图文详情 -->
+    <view class="img_detail">
+      <view class="detail_title">
+        ———— 图文详情 ————
+      </view>
+      <view class="detail_all">
+        <rich-text nodes="{{richText}}"></rich-text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="buy_buttonGroup">
+    <view class="kefu">
+      <view class="iconfont icon-24gl-headset"></view>
+      客服
+      <button open-type="contact"></button>
+    </view>
+    <view class="share">
+      <view class="iconfont icon-fenxiang"></view>
+      分享
+      <button open-type="share"></button>
+    </view>
+    <!-- 跳转导航栏  open-type="switchTab" -->
+    <navigator class="shopcar" url="/pages/cart/index" open-type="switchTab">
+      <view class="iconfont icon-gouwuche"></view>
+      购物车
+    </navigator>
+    <view class="addShopcar" bindtap="selectOpen">
+      加入购物车
+    </view>
+    <view class="buyNow" bindtap="selectOpen">
+      立即购买
+    </view>
+  </view>
+
+  <BottomBox wx:if="{{open}}" menu='{{goodsDetail}}' properties='{{properties}}' skuList="{{skuList}}"
+    bind:closePage="closePage"></BottomBox>
+
+</view>
