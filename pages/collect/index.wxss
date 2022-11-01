@@ -1,1 +1,104 @@
-/* pages/collect/index.wxss */
+.collect_page {
+  background-color: #f8f8f8;
+  padding-top: 10rpx;
+  height: 100vh;
+}
+
+.collect_page .collect_title {
+  text-align: right;
+  margin-bottom: 20rpx;
+}
+
+.collect_page .collect_title .gl_btn {
+  border-bottom: 1px solid gainsboro;
+  padding: 20rpx;
+  margin-right: 20rpx;
+}
+
+.collect_page .collect_tip {
+  margin-top: 200rpx;
+  text-align: center;
+}
+
+.collect_page .collect_tip image {
+  border-radius: 500rpx;
+}
+
+.collect_page .collect_tip view {
+  margin-top: 20rpx;
+  color: #dbd7d7;
+}
+
+.collect_page .collect_page_content .collect_page_info {
+  display: flex;
+  align-items: center;
+}
+
+.collect_page .collect_page_content .collect_page_info .collect_checkbox {
+  margin-left: 20rpx;
+}
+
+.collect_page .collect_page_content .collect_page_info .collect_info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20rpx;
+  margin: 0 20rpx 20rpx;
+  border-radius: 20rpx;
+  background-color: white;
+}
+
+.collect_page .collect_page_content .collect_page_info .collect_info .collect_page_text {
+  flex: 4;
+  padding: 18rpx;
+}
+
+.collect_page .collect_page_content .collect_page_info .collect_info .collect_page_text .text_up {
+  height: 70%;
+}
+
+.collect_page .collect_page_content .collect_page_info .collect_info .collect_page_text .text_under {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collect_page .collect_page_content .collect_page_info .collect_info .delBtn {
+  height: 200rpx;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--themeColor);
+  border-radius: 20rpx;
+}
+
+.collect_page .collect_page_content .collect_page_info .disable {
+  pointer-events: none;
+}
+
+.collect_page .qx_yuan {
+  height: calc(100vh - 120rpx);
+}
+
+.collect_page .qx_active {
+  height: calc(100vh - 250rpx);
+}
+
+.collect_page .qx_menu {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 50rpx;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid gainsboro;
+}
+
+.collect_page .qx_menu .qx_right .qx_del {
+  padding: 12rpx 30rpx;
+  border: 1px solid #ec6002;
+  border-radius: 28rpx;
+}

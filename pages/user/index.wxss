@@ -1,138 +1,48 @@
-.user_page {
-  height: 100vh;
-}
-
 .user_page .user_head {
-  height: 20vh;
-  line-height: 20vh;
-  text-align: center;
+  margin: 16rpx;
+  height: 240rpx;
+  background-color: #4b7e6d;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
 }
 
-.user_page .user_head .user_head_comm {
+.user_page .user_head .user_head_pic {
+  margin: 0 4rpx 0 20rpx;
+}
+
+.user_page .user_head .user_head_pic .user_pic {
+  width: 180rpx;
+}
+
+.user_page .user_head .user_detail_denglu {
+  display: flex;
+  color: white;
   width: 100%;
   height: 100%;
+  align-items: center;
+  padding: 30rpx;
 }
 
-.user_page .user_head .user_head_text {
-  font-weight: 600;
+.user_page .user_head .user_detail {
+  color: white;
 }
 
-.user_page .user_head .user_head_detail {
-  display: flex;
-  align-content: space-around;
-  padding: 0 30rpx;
-}
-
-.user_page .user_head .user_head_detail .user_head_left {
-  flex: 7;
-  display: flex;
-}
-
-.user_page .user_head .user_head_detail .user_head_left .user_head_pic_content .user_head_pic {
-  width: 160rpx;
-  vertical-align: middle;
-  border-radius: 10rpx;
-}
-
-.user_page .user_head .user_head_detail .user_head_left .user_name {
-  font-size: 26rpx;
-  margin-top: -10rpx;
-  margin-left: 30rpx;
-}
-
-.user_page .user_head .user_head_detail .user_head_left .user_name view {
-  height: 4vh;
-  text-align: left;
-}
-
-.user_page .user_head .user_head_detail .user_head_right {
-  flex: 1;
-}
-
-.user_page .user_detail {
-  display: flex;
-  border-bottom: 1rpx solid gainsboro;
-  border-top: 1rpx solid gainsboro;
-}
-
-.user_page .user_detail .user_ordering_li {
-  padding: 20rpx;
-  flex: 1;
-  text-align: center;
-}
-
-.user_page .user_detail .user_ordering_li .user_ordering_icon {
-  font-size: 40rpx;
+.user_page .user_head .user_detail view {
   margin-bottom: 14rpx;
 }
 
-.user_page .user_detail .user_ordering_li .user_ordering_font {
-  font-size: 20rpx;
-  color: #616060;
+.user_page .user_section {
+  padding: 14rpx 40rpx 40rpx 40rpx;
 }
 
-.user_page .user_detail .user_ordering_li:nth-child(-n+4) {
-  border-right: 1rpx solid #f5f1f1;
-}
-
-.user_page .user_ordering .user_ordering_title {
+.user_page .user_section .user_section_li {
   display: flex;
   justify-content: space-between;
-  padding: 20rpx 30rpx;
-  border-bottom: 1rpx solid gainsboro;
-  font-size: 20rpx;
-}
-
-.user_page .user_ordering .user_ordering_title .user_ordering_title1 {
-  color: #a4a1a1;
-}
-
-.user_page .user_ordering .user_ordering_body {
-  display: flex;
+  padding: 30rpx 0;
   border-bottom: 1rpx solid gainsboro;
 }
 
-.user_page .user_ordering .user_ordering_body .user_ordering_li {
-  padding: 20rpx;
-  flex: 1;
-  text-align: center;
-}
-
-.user_page .user_ordering .user_ordering_body .user_ordering_li .user_ordering_icon {
-  font-size: 40rpx;
-  margin-bottom: 14rpx;
-}
-
-.user_page .user_ordering .user_ordering_body .user_ordering_li .user_ordering_font {
-  font-size: 20rpx;
-  color: #616060;
-}
-
-.user_page .user_ordering .user_ordering_body .user_ordering_li:nth-child(-n+4) {
-  border-right: 1rpx solid #f5f1f1;
-}
-
-.user_page .user_shouhuo_manage {
-  font-size: 28rpx;
-  padding: 30rpx;
-  border-bottom: 1rpx solid gainsboro;
-}
-
-.user_page .user_other {
-  margin-top: 37rpx;
-}
-
-.user_page .user_other .user_other_title {
-  padding: 30rpx 30rpx;
-  color: #616060;
-  border-bottom: 1rpx solid gainsboro;
-}
-
-.user_page .user_other .user_other_li {
-  padding: 20rpx 30rpx;
-  border-bottom: 1rpx solid gainsboro;
-}
-
-.user_page .a:active {
-  background-color: #dfdedc;
+.user_page .user_section .user_section_li:active {
+  background-color: aliceblue;
 }

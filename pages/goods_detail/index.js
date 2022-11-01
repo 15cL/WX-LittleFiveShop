@@ -15,7 +15,8 @@ Page({
     properties: [], // property 列表
     skuList: [], // sku 列表
   },
-
+  goodId: '',
+  goodInfo: {},
   collectNum: 0,
 
   /**
@@ -23,6 +24,20 @@ Page({
    */
   onLoad(options) {
     this.getGoodDetail(options.id)
+    this.goodId = options.id
+    let collList = wx.getStorageSync('collect') || []
+    console.log(collList);
+    let collFlag = collList.some(item => {
+      if (item.goodId == options.id) {
+        return true
+      }
+    })
+    if (collFlag) {
+      this.collectNum = !this.collectNum
+      this.setData({
+        collectSta: this.collectNum % 2
+      })
+    }
   },
 
   async getGoodDetail(id) {
@@ -58,6 +73,7 @@ Page({
         skuList: skuList
       })
     }
+    this.goodInfo = data.data.basicInfo
     this.setData({
       goodsDetail: data.data,
       richText: richtext,
@@ -74,7 +90,21 @@ Page({
 
 
   toggleCollect(e) {
-    this.collectNum++
+    this.collectNum = !this.collectNum
+    let collectList = wx.getStorageSync('collect') ? wx.getStorageSync('collect') : [];
+    if (this.collectNum) {
+      console.log("收藏成功");
+      collectList.push({ goodId: this.goodId, info: this.goodInfo, checked: false })
+
+      console.log(collectList);
+    } else {
+      let index = collectList.findIndex(item => item.goodId == this.goodId)
+      console.log(index);
+      collectList.splice(index, 1)
+      console.log(collectList);
+      console.log("取消收藏");
+    }
+    wx.setStorageSync("collect", collectList);
     this.setData({
       collectSta: this.collectNum % 2
     })
@@ -96,7 +126,7 @@ Page({
 
   },
 
-// 打开菜单规格选择窗口
+  // 打开菜单规格选择窗口
   selectOpen(e) {
     setTimeout(() => {
       this.setData({
@@ -104,8 +134,8 @@ Page({
       })
     }, 100);
   },
-  
-// 打开菜单规格选择窗口
+
+  // 打开菜单规格选择窗口
   closePage() {
     this.setData({
       open: 0

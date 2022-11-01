@@ -1,2 +1,23 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="search_page">
+  <scroll-view class="home_goods" scroll-y scroll-top="80rpx">
+
+    <view class=" home_goods_detail">
+      <navigator class="home_goods_li" wx:for="{{goodList}}" wx:key="id" url="/pages/goods_detail/index?id={{item.id}}">
+        <view class="home_goods_left">
+          <image class="home_goods_img" src="{{item.pic}}" lazy-load="true" />
+        </view>
+        <view class="home_goods_right">
+          <view class="good_title">{{item.name}}</view>
+          <view class="home_goods_price">
+            <view class="good_price">${{item.minPrice}}</view>
+            <view wx:if="{{item.originalPrice && item.originalPrice > 0}}"
+              style='color:#aaa;text-decoration:line-through'>
+              ¥ {{item.originalPrice}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+
+</view>

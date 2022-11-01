@@ -1,1 +1,49 @@
-/* pages/search/index.wxss */
+.search_page .header {
+  display: flex;
+}
+
+.search_page .home_goods .home_goods_detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.search_page .home_goods .home_goods_detail .home_goods_li {
+  width: 335rpx;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  background-color: white;
+}
+
+.search_page .home_goods .home_goods_detail .home_goods_li .home_goods_left {
+  padding-top: 20rpx;
+}
+
+.search_page .home_goods .home_goods_detail .home_goods_li .home_goods_left .home_goods_img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.search_page .home_goods .home_goods_detail .home_goods_li .home_goods_right {
+  flex-wrap: wrap;
+  padding: 10rpx 20rpx 20rpx;
+}
+
+.search_page .home_goods .home_goods_detail .home_goods_li .home_goods_right .good_title {
+  width: 100%;
+  color: #242222;
+  text-align: start;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search_page .home_goods .home_goods_detail .home_goods_li .home_goods_right .home_goods_price {
+  display: flex;
+  justify-content: space-between;
+}

@@ -36,3 +36,20 @@
 .adress_page .Ok_btn:active {
   background-color: gainsboro;
 }
+
+.adress_page .shouAdress_content {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20rpx;
+}
+
+.adress_page .shouAdress_content .address_done .little_title {
+  margin-top: 10rpx;
+  font-size: smaller;
+  color: #909090;
+}
+
+.adress_page .shouAdress_content .jiantou {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,39 @@
+.login_page {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  .login_content {
+    margin-top: 140rpx;
+
+    .login_icon {
+      .icon {
+        width: 460rpx;
+        height: 380rpx;
+      }
+    }
+
+    .login_row {
+      display: flex;
+      padding: 20rpx;
+
+      view {
+        width: 30%;
+      }
+    }
+
+    .denglu_btn {
+      padding: 20rpx;
+      background-color: rgb(70, 150, 123);
+      color: white;
+      border-radius: 20rpx;
+      margin-top: 30rpx;
+      text-align: center;
+    }
+
+    .login_btn {
+      margin-top: 20rpx;
+      text-align: right;
+    }
+  }
+}

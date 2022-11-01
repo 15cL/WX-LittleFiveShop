@@ -1,1 +1,37 @@
-/* pages/login/index.wxss */
+.login_page {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login_page .login_content {
+  margin-top: 140rpx;
+}
+
+.login_page .login_content .login_icon .icon {
+  width: 460rpx;
+  height: 380rpx;
+}
+
+.login_page .login_content .login_row {
+  display: flex;
+  padding: 20rpx;
+}
+
+.login_page .login_content .login_row view {
+  width: 30%;
+}
+
+.login_page .login_content .denglu_btn {
+  padding: 20rpx;
+  background-color: #46967b;
+  color: white;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.login_page .login_content .login_btn {
+  margin-top: 20rpx;
+  text-align: right;
+}

@@ -1,89 +1,59 @@
 <view class="user_page">
-  <view class="user_head a">
-    <view class="user_head_text user_head_comm" wx:if="{{hasUserInfo}}" bindtap="getUserProfile">
-      登录
+  <view class="user_head">
+    <view class="user_head_pic">
+      <image class="user_pic" src="../../icon/user_pic.png" mode='widthFix' />
     </view>
-    <view wx:else class="user_head_detail user_head_comm">
-
-      <view class="user_head_left">
-        <view class="user_head_pic_content">
-          <image class="user_head_pic" src="{{userInfo.avatarUrl}}" mode="widthFix" />
-        </view>
-
-        <view class="user_name">
-          <view class="user_id">
-            <view>用户ID: {{userId}}</view>
-            <view>{{userInfo.nickName}}</view>
-          </view>
-
-        </view>
-      </view>
-
-      <view class="user_head_right">
-        <view class="iconfont icon-shezhi" style="height:40rpx ; margin-top: -10rpx;"></view>
-        <view style="font-size: 26rpx;">
-          设置
-        </view>
-
-      </view>
-
+    <view wx:if="{{!token}}" class="user_detail_denglu" bindtap="denglu">
+      请登录
     </view>
-
+    <view wx:else class="user_detail">
+      <view>
+        昵称: {{userInfo.paperName}}
+      </view>
+      <view>
+        登录名: {{userInfo.username}}
+      </view>
+      <view>
+        个性签名: {{userInfo.paper}}
+      </view>
+    </view>
   </view>
-
-  <view class="user_detail">
-    <navgator class="user_ordering_li a" wx:for="{{detailList}}" wx:key="id">
-      <view class="iconfont {{item.icon}} user_ordering_icon"></view>
-      <view class="user_ordering_font">
-        {{item.title}}
+  <view class="user_section">
+    <view class="user_section_li" data-index="0" bindtap="switchNav">
+      <view>
+        我的收藏
       </view>
-    </navgator>
-  </view>
-
-
-  <view class="user_ordering">
-    <view class="user_ordering_title">
-      <text>我的订单</text>
-      <text class="user_ordering_title1">更多 ></text>
+      <view class="iconfont icon-jiantou">
+      </view>
     </view>
-
-
-
-
-    <view class="user_ordering_body">
-      <navigator class="user_ordering_li a" url="/pages/order/index?type={{item.id}}" wx:for="{{orderingList}}" wx:key="id">
-        <view class="iconfont {{item.icon}} user_ordering_icon"></view>
-        <view class="user_ordering_font">
-          {{item.title}}
-        </view>
-
-      </navigator>
+    <view class="user_section_li" data-index="1" bindtap="switchNav">
+      <view>
+        我的订单
+      </view>
+      <view class="iconfont icon-jiantou">
+      </view>
     </view>
-
-    <view class="user_shouhuo_manage a">
-      收货地址管理
+    <view class="user_section_li" data-index="2" bindtap="switchNav">
+      <view>
+        账号管理
+      </view>
+      <view class="iconfont icon-jiantou">
+      </view>
     </view>
-
-    <view class="user_other">
-      <view class="user_other_title">其他功能</view>
-      <view class="user_other_li a">
-        客服
+    <view class="user_section_li" data-index="3" bindtap="switchNav">
+      <view>
+        地址管理
       </view>
-      <view class="user_other_li a">
-        把应用推荐给其他人
+      <view class="iconfont icon-jiantou">
       </view>
-
-      <view class="user_other_li a">
-        意见反馈
-      </view>
-      <view class="user_other_li a">
+    </view>
+    <navigator url="/pages/about/index" class="user_section_li">
+      <view>
         关于我们
       </view>
-
-
-    </view>
-
-
-
+      <view class="iconfont icon-jiantou">
+      </view>
+    </navigator>
   </view>
+
 </view>

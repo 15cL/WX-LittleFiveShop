@@ -12,7 +12,7 @@
       <view class="cart_checkbox">
         <checkbox-group data-id="{{item.good_id}}" bindchange="handleXz">
           <checkbox checked="{{item.checked}}"></checkbox>
-        </checkbox-group>
+        </checkbox-group>      
       </view>
 
       <navigator class="cart_img" url="/pages/goods_detail/index?id={{item.good_id}}">

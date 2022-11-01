@@ -1,0 +1,26 @@
+.admin_page .admin_form .admin_input {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid ghostwhite;
+}
+
+.admin_page .admin_form .admin_input view {
+  width: 26%;
+}
+
+.admin_page .admin_form .admin_footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60rpx;
+}
+
+.admin_page .admin_form .admin_footer .admin_btn {
+  width: 100%;
+  padding: 20rpx;
+  text-align: center;
+  background-color: var(--themeColor);
+  color: white;
+  margin-bottom: 30rpx;
+}

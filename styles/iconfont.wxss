@@ -1,93 +1,78 @@
 @font-face {
-    font-family: "iconfont";
+    font-family:"iconfont";
     /* Project id 3616147 */
-    src: url('//at.alicdn.com/t/c/font_3616147_cixtnsyk9v7.woff2?t=1663243167983') format('woff2'), url('//at.alicdn.com/t/c/font_3616147_cixtnsyk9v7.woff?t=1663243167983') format('woff'), url('//at.alicdn.com/t/c/font_3616147_cixtnsyk9v7.ttf?t=1663243167983') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_3616147_jz8vu2om6j.woff2?t=1666860959727') format('woff2'), url('//at.alicdn.com/t/c/font_3616147_jz8vu2om6j.woff?t=1666860959727') format('woff'), url('//at.alicdn.com/t/c/font_3616147_jz8vu2om6j.ttf?t=1666860959727') format('truetype');
 }
-
 .iconfont {
-    font-family: "iconfont" !important;
+    font-family:"iconfont" !important;
     font-size: 16px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-touxiang6:before {
+    content:"\e632";
+}
+.icon-jiantou:before {
+    content:"\e662";
+}
 .icon-liwudai:before {
-    content: "\e63a";
+    content:"\e63a";
 }
-
 .icon-xinzeng:before {
-    content: "\e683";
+    content:"\e683";
 }
-
 .icon-shezhi:before {
-    content: "\e640";
+    content:"\e640";
 }
-
 .icon-yidingyue:before {
-    content: "\e693";
+    content:"\e693";
 }
-
 .icon-zuji:before {
-    content: "\e631";
+    content:"\e631";
 }
-
 .icon-lingqianbao:before {
-    content: "\e73e";
+    content:"\e73e";
 }
-
 .icon-daifukuan:before {
-    content: "\e65a";
+    content:"\e65a";
 }
-
 .icon-daifahuo:before {
-    content: "\e65b";
+    content:"\e65b";
 }
-
 .icon-daipingjia:before {
-    content: "\e638";
+    content:"\e638";
 }
-
 .icon-daishouhuo:before {
-    content: "\e666";
+    content:"\e666";
 }
-
 .icon-tuikuanshouhou:before {
-    content: "\e636";
+    content:"\e636";
 }
-
 .icon-wuliu:before {
-    content: "\e63f";
+    content:"\e63f";
 }
-
 .icon-gouwuche:before {
-    content: "\e73d";
+    content:"\e73d";
 }
-
 .icon-shoucang:before {
-    content: "\e627";
+    content:"\e627";
 }
-
 .icon-dingdan:before {
-    content: "\e897";
+    content:"\e897";
 }
-
 .icon-fukuantongzhi:before {
-    content: "\e60c";
+    content:"\e60c";
 }
-
 .icon-fanlishangcheng:before {
-    content: "\e665";
+    content:"\e665";
 }
-
 .icon-shoucang_shixin:before {
-    content: "\eca6";
+    content:"\eca6";
 }
-
 .icon-24gl-headset:before {
-    content: "\ea0a";
+    content:"\ea0a";
 }
-
 .icon-fenxiang:before {
-    content: "\e8b0";
+    content:"\e8b0";
 }

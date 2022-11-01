@@ -1,0 +1,20 @@
+<view class="admin_page">
+  <view class="admin_form">
+    <view class="admin_input">
+      <view>昵称</view>
+      <input class="" value="{{userInfo.paperName}}" type="text" bindinput="changePaperName"></input>
+    </view>
+    <view class="admin_input">
+      <view>个性签名</view>
+      <input class="" value="{{userInfo.paper}}" bindinput="changePaper"></input>
+    </view>
+    <view class="admin_input">
+      <view>修改密码</view>
+      <input class="" bindinput="changePwd" minlength="6" maxlength="16"></input>
+    </view>
+    <view class="admin_footer">
+      <view class="admin_btn" data-userinfo="{{userInfo}}" bindtap="keepValue">保存</view>
+      <view class="admin_btn" bindtap="loginOut">退出登录</view>
+    </view>
+  </view>
+</view>

@@ -17,6 +17,11 @@ App({
 
   },
   globalData: {
-
+    token: "",
+    userInfo: {
+      paperName: '不碰爱情',
+      username: '',
+      paper: '有钱你就买！'
+    }
   }
 });

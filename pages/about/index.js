@@ -1,4 +1,4 @@
-// pages/feedback/index.js
+// pages/about/index.js
 Page({
 
   /**

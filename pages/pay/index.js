@@ -113,7 +113,7 @@ Page({
         let total_price = this.data.total_price
 
         // 加入待付列表
-        let daifuList = wx.getStorageSync('daifu');
+        let daifuList = wx.getStorageSync('daifu') || [];
 
         daifuList.push({ list, daifuNum: parseInt(Math.random() * 1000000000000000), time, total_price })
 

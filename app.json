@@ -2,17 +2,17 @@
   "pages": [
     "pages/index/index",
     "pages/category/index",
-    "pages/goods_list/index",
     "pages/goods_detail/index",
     "pages/cart/index",
     "pages/collect/index",
     "pages/order/index",
     "pages/search/index",
     "pages/user/index",
-    "pages/feedback/index",
     "pages/login/index",
     "pages/auth/index",
-    "pages/pay/index"
+    "pages/pay/index",
+    "pages/about/index",
+    "pages/admin/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -56,5 +56,6 @@
   "sitemapLocation": "sitemap.json",
   "requiredPrivateInfos": [
     "chooseAddress"
-  ]
+  ],
+  "lazyCodeLoading": "requiredComponents"
 }

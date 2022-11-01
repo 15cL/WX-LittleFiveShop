@@ -1,2 +1,32 @@
-<!--pages/login/index.wxml-->
-<text>pages/login/index.wxml</text>
+<view class="login_page">
+  <view class="login_content">
+    <view class="login_icon">
+      <image class="icon" src="../../icon/login_lo.png" />
+    </view>
+    <view class="login_row">
+      <view>
+        用户名
+      </view><input class="login_input" value="{{username}}" placeholder="用户名" bindinput="inputEdit0"></input>
+    </view>
+    <view class="login_row">
+      <view>
+        密码
+      </view>
+
+      <input class="login_input" value="{{password}}" bindinput="inputEdit1" password="true" placeholder="密码" minlength="6" maxlength="16">
+      </input>
+
+    </view>
+    <view class="denglu_btn" data-index="{{index}}" data-username="{{username}}" data-password="{{password}}"
+      bindtap="loginIn">
+      {{btnList[index]}}
+    </view>
+
+    <view class="login_btn" data-index="{{index}}" bindtap="switchLog">
+      {{loginList[index]}}
+    </view>
+
+
+  </view>
+
+</view>

@@ -37,4 +37,25 @@
   .Ok_btn:active {
     background-color: gainsboro;
   }
+
+  .shouAdress_content {
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 20rpx;
+
+    .address_done {
+      .little_title {
+        margin-top: 10rpx;
+        font-size: smaller;
+        color: rgb(144, 144, 144);
+      }
+    }
+
+    .jiantou {
+      display: flex;
+      align-items: center;
+    }
+
+  }
 }

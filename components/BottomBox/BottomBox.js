@@ -97,7 +97,23 @@ Component({
     },
 
     addShopCar(e) {
-
+      let userflag = getApp().globalData.token ? true : false
+      if (!userflag) {
+        wx.showToast({
+          title: '请先登录用户',
+          icon: 'none',
+          duration: 1500,
+          mask: true,
+          success: (result) => {
+            setTimeout(() => {
+              wx.navigateTo({
+                url: '../../pages/login/index',
+              });
+            }, 1000);
+          },
+        });
+        return
+      }
       let addCar = []
       console.log(e.currentTarget.dataset.guige);
       e.currentTarget.dataset.guige.map(v => addCar.push(v.attributes.filter(item => item.isActive == true)[0]))
